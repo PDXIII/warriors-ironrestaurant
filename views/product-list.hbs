@@ -1,0 +1,23 @@
+{{#if pizzas}}
+
+  {{#each pizzas}}
+
+    <a href="/pizzas/{{this.name}}">
+      <div
+        class="pizza-card"
+        style="background-image: url(/images/{{this.imageFile}})"
+      >
+        <div class="text-container">
+          <h3>{{this.name}}</h3>
+          <h4>for just {{this.price}}€</h4>
+        </div>
+      </div>
+    </a>
+  {{/each}}
+
+{{else}}
+  <section class="card">
+    <h1>Don’t be so cheap!</h1>
+  </section>
+
+{{/if}}

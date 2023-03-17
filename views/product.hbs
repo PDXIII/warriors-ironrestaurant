@@ -1,4 +1,4 @@
-<h1>{{title}}</h1>
+<h1>{{name}} pizza</h1>
 
 {{#if price}}
     <h2>Price: {{price}}</h2>
@@ -8,6 +8,8 @@
 
 
 <hr />
+
+{{> veggie_banner }}
 
 {{#if ingredients}}
     <h2>Ingredients:</h2>
@@ -19,8 +21,9 @@
     </ul>
 {{/if}}
 
-
-<img src="/images/{{imageFile}}" alt="{{title}}" />
+{{#if imageFile}}
+    <img src="/images/{{imageFile}}" alt="{{title}}" />
+{{/if}}
 
 
 <hr />
